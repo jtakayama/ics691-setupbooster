@@ -12,7 +12,7 @@ def supply(request, page_name):
         # Set the defaults for a new article
         form = NewArticleForm(request.POST)
         new_article = form.save(commit=False)
-        new_article.saveNew(0, datetime.datetime.now(), datetime.datetime.now(), profile.name)
+        new_article.saveNew(profile.name, 0, datetime.datetime.now(), datetime.datetime.now(), profile.name)
     else:
         # Unbound form
         form = NewArticleForm()

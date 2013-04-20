@@ -9,17 +9,17 @@
         </a>
     </div>
     <div class="content-box-contents">
-        <!-- TEST CODE (does not submit correctly) -->
-        Create a new article. You will be listed as the first editor.
-        <form action="/test/" method="post"/>
-        	{{ view_objects.create_article.form }}
-        	<br/><input type="submit" value="Edit new article"/>
-        </form>
+        <!-- TEST CODE: Redirect is not yet implemented. -->
+        Create a new article. You will be listed as the first editor.<br/>
         Notes:<br/>
         <ul>
         	<li>The title should be 250 characters or less.</li>
         	<li>The category should be 250 characters or less.</li>
         	<li>Separate tags with commas if more than one is specified.</li>
         </ul>
+        <form action="/unimplemented_redirect_404/" method="post"/>
+        	{{ view_objects.create_article.form }}
+        	<br/><input type="submit" value="Edit new article"/>
+        </form>
     </div>
 </div>
