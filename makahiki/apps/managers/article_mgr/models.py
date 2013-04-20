@@ -30,6 +30,14 @@ class Article(models.Model):
     lastedited = models.DateField()
     lasteditedby = models.CharField(max_length=250, help_text="The username of the last editor to work on the article.")
     
+    # Pass in field values for a newly created article entry
+    def saveNew(self, revision_num, created, last_edit, last_edit_by):
+        self.revision = revision_num
+        self.creationdate = created
+        self.lastedited = last_edit
+        self.lasteditedby = last_edit_by
+        self.save()
+    
     def __unicode__(self):
         return self.title
     

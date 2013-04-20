@@ -12,12 +12,9 @@ def supply(request, page_name):
         # Set the defaults for a new article
         form = NewArticleForm(request.POST)
         new_article = form.save(commit=False)
-        new_article.revision = 0
-        new_article.creationdate = datetime.datetime.now()
-        new_article.lastedited = datetime.datetime.now()
-        new_article.lasteditedby = profile.name
-        new_article.save()
+        new_article.saveNew(0, datetime.datetime.now(), datetime.datetime.now(), profile.name)
     else:
+        # Unbound form
         form = NewArticleForm()
 
     return {
