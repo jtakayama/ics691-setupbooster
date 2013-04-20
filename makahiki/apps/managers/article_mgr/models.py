@@ -7,7 +7,7 @@ OS_CHOICES = (
     ('MAC', 'Mac'),
     ('WINDOWS', 'Windows'),
     ('BSD', 'BSD'),
-    ('OTHER_UNIX', 'Other_Unix'),
+    ('OTHER UNIX', 'Other Unix'),
     ('IOS','iOS'),
     ('ANDROID', 'Android'),
     ('OTHER', 'Other'),
@@ -15,11 +15,11 @@ OS_CHOICES = (
 )
 
 class Article(models.Model):
-    title = models.CharField(max_length=250, help_text="The article title (up to 250 characters).")
-    editors = models.TextField(help_text = "Comma-separated list of editors (e.g., Alice,Bob)."),
+    title = models.CharField(max_length=250, help_text="The article title (up to 250 characters).<br/>")
+    editors = models.TextField(help_text = "Comma-separated list of editors' usernames (e.g., Alice,Bob). Remember to add yourself.<br/>")
     # Targeted operating system
-    os = models.CharField(max_length=100, choices=OS_CHOICES, help_text = "The OS this article will be written for."),
-    category = models.CharField(max_length=250, help_text="The general subject of this article (e.g., Makahiki."),
+    os = models.CharField(max_length=100, choices=OS_CHOICES, help_text = "The OS this article will be written for.<br/>")
+    category = models.CharField(max_length=250, help_text="The general subject of this article (e.g., Makahiki).<br/>")
     tags = models.TextField(help_text = "Comma-separated list of tags.")
     
     # The fields that must be determined by views.py, not the user
@@ -31,7 +31,8 @@ class Article(models.Model):
     lasteditedby = models.CharField(max_length=250, help_text="The username of the last editor to work on the article.")
     
     # Pass in field values for a newly created article entry
-    def saveNew(self, revision_num, created, last_edit, last_edit_by):
+    def saveNew(self, editor, revision_num, created, last_edit, last_edit_by):
+        self.editors = editor
         self.revision = revision_num
         self.creationdate = created
         self.lastedited = last_edit

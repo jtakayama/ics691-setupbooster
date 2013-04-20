@@ -7,4 +7,4 @@ class NewArticleForm(ModelForm):
     
     class Meta:
         model = Article
-        fields = ('title', 'editors', 'os', 'category', 'tags')
+        fields = ('title', 'os', 'category', 'tags')
