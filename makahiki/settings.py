@@ -127,6 +127,8 @@ INSTALLED_APPS = (
     'apps.managers.score_mgr',
     'apps.managers.cache_mgr',
     'apps.managers.log_mgr',
+    # Components being tested
+    'apps.managers.article_mgr',
 
     # 3rd party libraries
     'apps.lib.django_cas',
@@ -188,6 +190,7 @@ INSTALLED_WIDGET_APPS = (
     'badge_scoreboard',
     'badges',
     'bonus_points',
+    'create_article',
     'home',
     'energy_power_meter',
     'my_achievements',

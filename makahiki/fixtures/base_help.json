@@ -526,5 +526,18 @@
             "contents": "The water scoreboard shows how your lounge is doing in the water competition. The goal of the water competition is to be the lounge that uses the least amount of water.\r\n\r\nThe scoreboard alternates between showing the amount of water used by each team during the current round, and the amount of water used overall.",
             "title": "Water Scoreboard"
         }
-    }
+    },
+    {
+        "pk": 51,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "widget",
+            "title": "Create Article",
+            "parent_topic": null,
+            "priority": 0,
+            "slug": "create-article",
+            "contents": "Creates a new article with the given title, subject, and tags. The creation date will be the displayed creation date."
+
+        }
+    } 
 ]

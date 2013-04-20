@@ -551,6 +551,16 @@
         }
     },
     {
+        "pk": 114,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "priority": 2,
+            "widget": "create_article",
+            "enabled": true,
+            "page": 8
+        }
+    },
+    {
         "pk": 1,
         "model": "challenge_mgr.gameinfo",
         "fields": {

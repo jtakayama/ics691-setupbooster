@@ -1,0 +1,29 @@
+<div class="content-box">
+    <div class="content-box-title">
+        Create New Article
+        <a href="#" style="float: right">
+            <img src="{{ STATIC_URL }}images/icons/icon-help-sm.png" width="20"
+                 align="center"
+                 title="Click to get help about this window"
+                 onclick="toggleHelp(event, 'widget', 'create-article'); return false;"/>
+        </a>
+    </div>
+    <div class="content-box-contents">
+        <!-- TEST CODE (does not submit correctly) -->
+        <form action="/test/" method="post"/>
+        	Title: <input type="text" name="title"/><br/>
+        	Editor: {{ view_objects.create_article.name }}<br/>
+        	Subject: <input type="text" name="subject"/><br/>
+        	250 characters or less.<br/>
+        	Tags: <input type="text" name="tags"/><br/>
+        	Separate tags with commas. 10 tags maximum.<br/>
+        	<input type="submit" value="New Article"/>
+        	Things to note:
+        	<ul>
+        	<li>The title should be 250 characters or less.</li>
+        	<li>Subjects should be 250 characters or less.</li>
+        	<li>Separate tags with commas if more than one is specified.</li>
+        	</ul>
+        </form>
+    </div>
+</div>
