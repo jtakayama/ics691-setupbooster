@@ -536,7 +536,7 @@
             "parent_topic": null,
             "priority": 0,
             "slug": "create-article",
-            "contents": "Creates a new article with the given title, subject, and tags. The creation date will be the displayed creation date."
+            "contents": "Creates a new article with the given title, subject, and tags. The creation date and time will be the current date and time."
 
         }
     } 
