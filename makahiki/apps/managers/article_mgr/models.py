@@ -1,9 +1,7 @@
 """Model for a wiki article."""
 
 from django.db import models
-from django.forms import ModelForm
 
-# Duplicate of OS_CHOICES in article_mgr.py
 OS_CHOICES = (
     ('LINUX', 'Linux'),
     ('MAC', 'Mac'),
@@ -17,20 +15,20 @@ OS_CHOICES = (
 )
 
 class Article(models.Model):
-    revision = models.PositiveIntegerField
+    revision = models.PositiveIntegerField()
     # article_file = models.FilePathField
     article_file = "Actual file creation not yet implemented."
     title = models.CharField(max_length=250, choices=OS_CHOICES)
     # An arbitrary maximum of 10 editors per article
-    editors = models.TextField
-    creationdate = models.datetime
-    lastedited = models.datetime
+    editors = models.TextField()
+    creationdate = models.DateField()
+    lastedited = models.DateField()
     lasteditedby = models.CharField(max_length=250)
     # Targeted operating system
     os = models.CharField(max_length=100)
     category = models.CharField(max_length=250)
     # An arbitrary maximum of 10 tags.
-    tags = models.TextField
+    tags = models.TextField()
     
     def __unicode__(self):
         return self.title
@@ -104,30 +102,14 @@ class Article(models.Model):
     def remove_tag(self, not_tag):
         all_tags = self.tags.split(',')
         remaining_tags = ""
-        # Add the remaining editors back in.
+        # Add the remaining tags back in.
         for t in all_tags:
             if t != not_tag:
                 remaining_tags += (t + ',')
-        # This is an implementation flaw, but I have not implemented
-        # a system to let admins edit all articles yet.
         if remaining_tags.split(',').length == 0:
             return "The article has no tags."
         else:
             self.tags = remaining_tags
             return remaining_tags
-    
-class NewArticleForm(ModelForm):
-    title = models.CharField(max_length=250, required=True, help_text="The article title (up to 250 characters).")
-    editors = models.TextField(required=True, help_text = "Comma-separated list of editors (e.g., Alice,Bob)."),
-    os = models.CharField(max_length=250, required=True, help_text = "The OS this article will be written for."),
-    category = models.CharField(required=True, help_text="The general subject of this article (e.g., Makahiki."),
-    tags = models.TextField(required=True, help_text = "Comma-separated list of tags.")
-    # It is expected that a views.py file that uses this form will provide default
-    # values for revision, creationdate, lastedited, and lasteditedby.
-    
-    class Meta:
-        model = Article
-        fields = ('title', 'editors', 'os', 'category', 'tags')
-        
     
         

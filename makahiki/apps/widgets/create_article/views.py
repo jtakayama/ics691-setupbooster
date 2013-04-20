@@ -1,7 +1,7 @@
 """Provides the view for the Create Article widget."""
 
 import datetime
-from apps.managers.article_mgr.models import NewArticleForm
+from apps.managers.article_mgr.forms import NewArticleForm
 
 def supply(request, page_name):
     """ supply view_objects for widget rendering."""
