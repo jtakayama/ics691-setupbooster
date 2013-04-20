@@ -15,12 +15,12 @@ OS_CHOICES = (
 )
 
 class Article(models.Model):
-    title = models.CharField(max_length=250, required=True, help_text="The article title (up to 250 characters).")
-    editors = models.TextField(required=True, help_text = "Comma-separated list of editors (e.g., Alice,Bob)."),
+    title = models.CharField(max_length=250, help_text="The article title (up to 250 characters).")
+    editors = models.TextField(help_text = "Comma-separated list of editors (e.g., Alice,Bob)."),
     # Targeted operating system
-    os = models.CharField(max_length=100, choices=OS_CHOICES, required=True, help_text = "The OS this article will be written for."),
-    category = models.CharField(max_length=250, required=True, help_text="The general subject of this article (e.g., Makahiki."),
-    tags = models.TextField(required=True, help_text = "Comma-separated list of tags.")
+    os = models.CharField(max_length=100, choices=OS_CHOICES, help_text = "The OS this article will be written for."),
+    category = models.CharField(max_length=250, help_text="The general subject of this article (e.g., Makahiki."),
+    tags = models.TextField(help_text = "Comma-separated list of tags.")
     
     # The fields that must be determined by views.py, not the user
     revision = models.PositiveIntegerField()
@@ -28,7 +28,7 @@ class Article(models.Model):
     article_file = "Actual file creation not yet implemented."
     creationdate = models.DateField()
     lastedited = models.DateField()
-    lasteditedby = models.CharField()
+    lasteditedby = models.CharField(max_length=250, help_text="The username of the last editor to work on the article.")
     
     def __unicode__(self):
         return self.title
