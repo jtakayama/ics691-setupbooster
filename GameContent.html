@@ -73,8 +73,396 @@
 		</div>
 	</div>
 	<!-- Content -->
-	<div class="row-fluid">
-		Test: Game Content page
+	<div class="container span12">
+		<div class="row-fluid">
+			<div class="span4 bs-docs-sidebar">
+        		<ul class="nav nav-list bs-docs-sidenav">
+          			<li><a href="#overview"><i class="icon-chevron-right"></i> Overview</a></li>
+          			<li><a href="#site-basics"><i class="icon-chevron-right"></i> Activities 1: Site Basics</a></li>
+          			<li><a href="#article-basics"><i class="icon-chevron-right"></i> Activities 2: Articles</a></li>
+          			<li><a href="#article-extras"><i class="icon-chevron-right"></i> Activities 3: Article Extras</a></li>
+          			<li><a href="#user-basics"><i class="icon-chevron-right"></i> Activities 4: Users</a></li>
+          			<li><a href="#collaboration-basics"><i class="icon-chevron-right"></i> Activities 5: Collaboration</a></li>
+          			<li><a href="#ratings-basics"><i class="icon-chevron-right"></i> Activities 6: Ratings</a></li>
+        		</ul>
+      		</div>
+			<div class="span8">
+				<h1>Game Content</h1>
+				<!-- Overview -->
+				<section id="overview">
+	          		<div class="page-header">
+	            		<h4>Overview</h4>
+	          		</div>
+					<p>SetupBooster's final implementation will provide a tutorial system that 
+					   helps new users to learn about its wiki system by editing test 
+					   articles and working with simulated user accounts. Completing
+					   each tutorial activity earns points and badges along the way. 
+					   Completing all activities earns a "Basic Training" badge, which
+					   is required to edit articles. Sample text is provided
+					   for each activity. (Submit buttons are non-functional and will 
+					   just reload the page.)
+					</p>
+					<p>Note: The current early-stage implementation of the system does not support
+					file uploads or many of the features of article editing.</p>
+				</section>
+				<!-- Activities 1 -->
+				<section id="site-basics">
+					<div class="page-header">
+						<h4> Activities 1: Site Basics</h4>
+						<p>The first category of activities deals with the basics of what
+						the site is for and sets out the least someone needs to know
+						about site policy (though it is not comprehensive). This largely
+						consists of activities in which users read a short text (videos
+						could be substituted) and have their answers to comprehension 
+						questions be verified by administrators. </p>
+						<h5>1. What Is A Wiki? (5 points)</h5>
+						<p>
+							A wiki is a website with articles that can be edited by any
+							of its members at any time. The ideal of a wiki is to provide
+							a platform for users to share knowledge with others by creating
+							and improving articles. <a href="http://en.wikipedia.org/wiki/">Wikipedia</a>
+							is one of the largest and best-known examples of this kind of site.
+						</p>
+						<hr/>
+						<p>	In general, should anyone be able to edit a wiki article?<br/>
+						    <form action="#" method="post">
+						    <input type="radio" name="choices" value="Yes"/> Yes<br/>
+						    <input type="radio" name="choices" value="No"/> No<br/>
+						    <input type="submit"/><br/>
+						    </form>
+						    (Correct answer: Yes)
+						</p>
+						<hr/>
+						<h5>2. What is SetupBooster? (5 points)</h5>
+						<p>SetupBooster is designed to be a wiki for software articles organized
+						   by version, operating system, subject, and tags indicating article content.
+						   A problem of many help sites is that it's difficult to determine what version
+						   of the software is being referred to and what platform it's supposed to be on.
+						   It's also sometimes difficult to contact the person who wrote the article
+						   if you have more specific questions, or if the solution for whatever reason
+						   doesn't work for you. SetupBooster allows guides to be updated and the
+						   original authors to be contacted if you have problems.</p>
+						 <p>SetupBooster is not a bug reporting system; those should
+						 	be handled by the actual developers. However, it can be a place to tell people how you
+						 	got around a bug or took advantage of an undocumented feature.</p>
+						 <p>SetupBooster is not a place to complain about things unless you've found
+						    a way to fix them.</p>
+						 <hr/>
+						 <p>
+						 	SetupBooster articles should: <br/>
+						    <form action="#" method="post">
+						    <input type="radio" name="choices" value="1"/> 1. Tell people how to do things with a specific application, API, or other software<br/>
+						    <input type="radio" name="choices" value="2"/> 2. Report bugs or design issues without describing a workaround<br/>
+						    <input type="radio" name="choices" value="3"/> 3. Complain about things you don't like<br/>
+						    <input type="submit"/><br/>
+						    </form>
+						    (Answer: 1.)
+						  </p>
+						  <hr/>
+						  <h5>3. Is It Original? (10 points)</h5>
+						  <p>Unlike Wikipedia, a lot of what is posted on SetupBooster will
+						  fall under "original research" - things users figured out how to do
+						  on their own. However, if your article does use other sources as reference
+						  or combines and organizes content from many other, less comprehensive
+						  articles on other sites or in printed guides, it's important to
+						  give credit where credit is due.</p>
+						  <p>Setupbooster uses the APA (American Psychological Association) format.
+						  The Purdue Owl's <a href="http://owl.english.purdue.edu/owl/resource/560/10/">Reference List: Electronic Sources (Web Publications)</a>
+						  is a good place to start.</p>
+						  <hr/>
+						  <p>You are citing a post on the online forum &quot;Queue Overload&quot;
+						  with the title "World Simulator keeps crashing and forcing me to
+						  restart from scratch," by a user with the screen name "John Doe."
+						  It is Post 1 in the thread, posted on October 25, 2012. The URL
+						  of the post is http://queueoverload.com/questions/134021605/world-simulator-keeps-crashing.
+						  How would you write this citation?</p>
+						  <form action="#" method="post">
+						    <textarea name="citation" rows="10" cols="80"></textarea><br/>
+						    <input type="submit"/><br/>
+						   </form>
+						  (The answer to a question like this would probably need to be reviewed manually.)<br/>
+						  <pre>
+Doe, J. (2012, October 25). World Simulator keeps 
+	crashing and forcing me to restart from scratch
+	[Msg 1]. Message posted to http://queueoverload
+	.com/questions/134021605/world-simulator-keeps-
+	crashing</pre>
+						  <hr/>
+						  <h5>4. Acceptable Content (5 points)</h5>
+						  SetupBooster has some rules on user-generated content (which covers most things here).
+						  Please acknowledge that you have read and understood the <a href="#" title="Not a real link">terms and conditions</a>.
+						  <hr/>
+						  I have read and understood the terms and conditions that govern my use of this site.
+						  By selecting "Yes" and submitting this answer, I accept the terms and conditions
+						  (if I have not done so previously).
+						  <form action="#" method="post">
+						    <input type="radio" name="choices" value="Yes"/> Yes<br/>
+						    <input type="radio" name="choices" value="No"/> No<br/>
+						    <input type="submit"/><br/>
+						  </form>
+						    (Answer: Yes. The user should be presented with the terms and conditions
+						    during the signup process; this adds another level of redundancy.)
+						  <hr/>
+					</div>
+				</section>
+				<!-- Activities 2 -->
+				<section id="article-basics">
+					<div class="page-header">
+						<h4> Activities 2: Articles</h4>
+						<p>The second category of activities deals with the basics of creating
+						and editing articles.  Sample text is provided
+						for each activity. (Submit buttons are non-functional and will 
+						just reload the page.)</p>
+						<hr/>
+						<h5>1. What Articles Are (5 points)</h5>
+						<p>The purpose of articles on SetupBooster is to provide instructions
+						to accomplish a task or solve a problem using an application, API,
+						or other software. Articles are not meant to be editorials or
+						places to complain about things unless the article can demonstrate
+						a solution for a particular version or versions of the software.</p>
+						<hr/>
+						<p>True or false: SetupBooster articles should be used to complain about
+						any issue which annoys you, and you do not have to implement a solution.</p>
+						<form action="#" method="post">
+						    <input type="radio" name="choices" value="True"/> True<br/>
+						    <input type="radio" name="choices" value="False"/> False<br/>
+						    <input type="submit"/><br/>
+						</form>
+						(Answer: False)
+						<hr/>
+						<h5>Learn to Format: Markdown Basics (10 points)</h5>
+						<p>SetupBooster articles use Markdown syntax. The full documentation
+						can be found at <a href="http://daringfireball.net/projects/markdown/syntax">Daring Fireball</a>.
+						</p>
+						<hr/>
+						<p>Read the <a href="http://daringfireball.net/projects/markdown/basics">Markdown "Basics" page</a>,
+						then mimic the formatting of the following text:<br/>
+						<h1>This is a top-level header.</h1>
+						<p>This is a paragraph, and...</p>
+						<p>...this is another paragraph.</p>
+						<h2>This is a second-level header.</h2>
+						<p>This is a paragraph. Some of the text has <strong>strong emphasis</strong>.</p>
+						<blockquote>This is a blockquote, with some of the text <em>emphasized</em>.</blockquote>
+						</p>
+						<form action="#" method="post">
+						    <textarea name="citation" rows="10" cols="80"></textarea><br/>
+						    <input type="submit"/><br/>
+						</form>
+						(Answer is below. The * and ** emphasis would also be accepted.)
+						<pre>
+This is a top-level header.
+===========================
+This is a paragraph, and...
+
+This is another paragraph.
+This is a second-level header.
+------------------------------
+
+This is a paragraph. Some of the text has __strong emphasis__.
+> This is a blockquote, with some of the text _emphasized_.
+						</pre>
+						<hr/>
+						<h5>3. Your First Article (10 points)</h5>
+						Before publishing an article, it's a good idea to
+						test it out in the sandbox, a special area where each
+						user can write up drafts.
+						<hr/>
+						Type "Test" as the article title, select "Linux"
+						as the Operating System, and type "Other" as the subject.
+						<form action="#" method="post">
+						    Title: <input type="text" name="title" size="30" maxlength="250"/><br/>
+						    Operating System: <select name="os_menu" size="3">
+						    	<option value="windows">Windows</option>
+						    	<option value="macosx">Mac OS X</option>
+						    	<option value="linux">Linux</option>
+						    	<option value="bsd">BSD</option>
+						    	<option value="android">Android</option>
+						    	<option value="ios">iOS</option>
+						    	<option value="other">Other</option>
+						    	</select><br/>
+						    Subject: <input type="text" name="subject" size="30" maxlength="250"/>
+						    <input type="submit"/><br/>
+						</form>
+						<hr/>
+						<h5>4. Start to Make It Better (10 points)</h5>
+						<p>Assuming you named your article "Test" in the previous activity,
+						click <a href="#">here</a> to go to your new article. Make any change at all,
+						then come back to this page and click "Submit Query."</p>
+						<form action="#" method="post">
+							<input type="submit"/>
+						</form>
+						<hr/>
+						<h5>5. Publish It (5 points)</h5>
+						<p>Once you're done editing an article, click its Publish
+						button to make it visible to everyone. This is a demo button,
+						so pressing it won't do anything this time.
+						</p>
+						<div class="btn">Publish</div><br/>
+						You can still edit an article after publishing it.
+						<p>Click "Submit Query" to finish this activity.</p>
+						<form action="#" method="post">
+							<input type="submit"/>
+						</form>
+						<hr/>
+						<h5>6. Tag, That's It (10 points)</h5>
+						<p>You can add tags to your articles to make them more
+						easily searchable. Tags are added via a comma-separated
+						string of values, e.g.:
+						<pre>xml,parser,semantic-web,singularity,self-replicating,sentient,buzzword</pre>
+						</p>
+						<hr/>
+						Tag your "Test" article with "setup" and "guide."
+						<form action="#" method="post">
+						    Add tags: <input type="text" name="add-tags" size="30" maxlength="250"/><br/>
+						    <input type="submit"/><br/>
+						</form>
+						(Answer: setup,guide)
+						<hr/>
+						<h5>7. Comments, Anyone? (5 points)</h5>
+						<p>In addition to the rating system (which we'll cover later), comments
+						are another, more detailed means of letting users know that you
+						like their articles or have a suggestion for improving them.</p>
+						<hr/>
+						Add a comment on your own article (plain text):
+						<form action="#" method="post">
+							Comment by <strong>username</strong> on article <strong>Test</strong>:<br/>
+						    <textarea name="comment-field" rows="10" cols="80"></textarea><br/>
+						    <input type="submit"/><br/>
+						</form>
+						<hr/>
+					</div>
+				</section>
+				<section id="article-extras">
+					<div class="page-header">
+						<h4> Activities 3: Article Extras</h4>
+						<p>These short activities cover some extra things users
+						can add to their articles, which demonstrate combinations
+						of Markup with HTML. Alternately, since Markup allows HTML,
+						clicking "view source" on the question page is a perfectly
+						acceptable way to find the answer.</p>
+						<hr/>
+						<h5>1. Embed Media Files (5 points)</h5>
+						Markup syntax supports any media file embeds you could make with 
+						regular HTML. To embed an image, use the &lt;img&gt; tag.
+						<hr/>
+						Type the code to embed the image in (SITE URL HERE)/test.png with 
+						title text "TEST", as shown below:<br/>
+						<img src="images/test.png" title="TEST"/><br/><br/>
+						<form action="#" method="post">
+						    <textarea name="text-field" rows="1" cols="50"></textarea><br/>
+						    <input type="submit"/><br/>
+						</form>
+						You can also use HTML to embed videos and other media files.
+						<br/>(Answer:)
+						<pre>&lt;img src=&quot;images/test.png&quot; title=&quot;TEST&quot;/&gt;</pre>
+						<hr/>
+						<h5>2. Upload Files (5 points)</h5>
+						SetupBooster supports non-executable file uploads of less than
+						20 MB in size. The upload form looks like this:
+						<form action="#" method="post">
+							<textarea name="text-field" rows="1" cols="100"></textarea>
+							<div class="btn">Browse</div><br/>
+							<div class="btn">Upload</div>
+						</form>
+					    For a list of supported file types, see the <a href="#" title="Not a real link">full list</a>.
+						Click "Submit Query" to finish this activity.
+						<form action="#" method="post">
+						    <input type="submit"/><br/>
+						</form>
+					</div>
+				</section>
+				<section id="user-basics">
+					<div class="page-header">
+						<h4> Activities 4: About Users</h4>
+						<hr/>
+						<h5>1. Types of Users (5 points)</h5>
+						<p>SetupBooster has two types of users: normal users
+						and administrators. Normal users can create articles,
+						edit articles, delete their own articles (if they are 
+						the only listed editor), and rate articles that they 
+						are not listed as editors of. Administrators can ban 
+						users, edit or delete any article, and nominate new 
+						administrators.</p>
+						For another version of this explanation, see the 
+						<a href="#" title="Not a real link">
+						About User Types</a> page. Click "Submit Query" 
+						to finish this activity.
+						<form action="#" method="post">
+							<input type="submit"/><br/>
+						</form>
+						<hr/>
+						<h5>2. Messaging (5 points)</h5>
+						<p>Registered users can leave messages for each other using
+						the "Send Message" tool on their own page.
+						<hr/>
+						Send the message "Hello" to user <strong>tutorialRobot</strong>:<br/>
+						<form action="#" method="post">
+							Send to user: <textarea name="sendto" rows="1" cols="50"></textarea><br/>
+							<textarea name="message" rows="10" cols="80"></textarea><br/>
+							<input type="submit"/><br/>
+						</form>
+						<hr/>
+						<h5>3. Reporting (5 points)</h5>
+						<p>If a user has violated the <a href="#" title="Not a real link">terms and conditions</a>,
+						submit a complaint via the "Report User" tool on your page. Once your report
+						is accepted or rejected, you will receive a message.
+						<hr/>
+						Report the user <strong>antimatterRobot:</strong>
+						<form action="#" method="post">
+							Report user: <textarea name="reportuser" rows="1" cols="50"></textarea><br/>
+							Reason:<br/><textarea name="reason" rows="20" cols="80"></textarea><br/>
+							<input type="submit"/><br/>
+						</form>
+						<hr/>
+						<h5>4. User Points (5 points)</h5>
+						<p>By now you've probably noticed that you've been getting
+						   points for finishing all of these tutorials. These points
+						   are part of how SetupBooster ranks its users. In addition
+						   to these points, users earn:
+						   <ul>
+						   		<li>+10 per new article</li>
+						   		<li>+5 for being added as an editor to another article</li>
+						   		<li>+3 for adding an editor to an article</li>
+						   		<li>+3 each time their article gets a rating of 4 or higher</li>
+						   		<li>+2 each time their article gets a rating of 3</li>
+						   		<li>-3 each time their article gets a rating of 2 or lower</li>
+						   		<li>-3 each time a user is reported to administrators and the complaint stands</li>
+						   </ul>
+						   For a more comprehensive explanation, see the <a href="#" title="Not a real link">
+						   Points page</a>. Click "Submit Query" to earn 5 more points.
+						   <form action="#" method="post">
+						    <input type="submit"/><br/>
+						   </form>
+						</p>
+						<h5>5. User Badges (5 points)</h5>
+						<p>Badges are awarded for completing certain milestone tasks (e.g.,
+						publishing your first article, being added as an editor for the first
+						time, getting over 100 points, etc.) Badges are worth values
+						that are multiples of 5 points. Finishing all of the tutorials
+						earns a "Basic Training" badge worth 20 points.</p>
+						For the full list, see the <a href="#" title="Not a real link">
+						Badges page</a>.
+						<hr/>
+						Click "Submit Query" to finish this activity.<br/>
+						<form action="#" method="post">
+							<input type="submit"/><br/>
+						</form>
+					</div>
+				</section>
+				<section id="collaboration-basics">
+					<div class="page-header">
+						<h4> Activities 5: Collaboration</h4>
+						PLACEHOLDER
+					</div>
+				</section>
+				<section id="ratings-basics">
+					<div class="page-header">
+						<h4> Activities 6: Ratings</h4>
+						PLACEHOLDER
+					</div>
+				</section>
+			</div>
+		</div>
 	</div>
 	
 	<!-- Le javascript
