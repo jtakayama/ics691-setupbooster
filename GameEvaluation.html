@@ -73,8 +73,90 @@
 		</div>
 	</div>
 	<!-- Content -->
-	<div class="row-fluid">
-		Test: Game Evaluation page
+	<div class="container span12">
+		<div class="row-fluid">
+			<div class="span4 bs-docs-sidebar">
+        		<ul class="nav nav-list bs-docs-sidenav">
+          			<li><a href="#overview"><i class="icon-chevron-right"></i> Overview</a></li>
+          			<li><a href="#user-test"><i class="icon-chevron-right"></i> Normal User Testing</a></li>
+          			<li><a href="#admin-test"><i class="icon-chevron-right"></i> Administrator Testing</a></li>
+        		</ul>
+      		</div>
+			<div class="span8">
+				<h1>Game Evaluation</h1>
+				<hr/>
+				<section id="overview">
+					<h4>Overview</h4>
+					<p>When Setupbooster is complete, it could be tested by emailing volunteers a link to
+					the demonstration instance. Once volunteers had created accounts and logged on, 
+					the site would direct them to begin the tutorial. To fully test the system's use of
+					gamification elements, the playtesting would also need to cover the creation and
+					rating of articles.</p>
+				</section>
+				<section id="user-test">
+					<h4>Normal User Testing</h4>
+					<p>PLACEHOLDER</p>
+				</section>
+				<section id="admin-test">
+					<h4>Administrator Testing</h4>
+					<p>Like any points-based system, it is probable that the points system can and will be
+					gamed. As the plan for the final implementation of the system currently stands, all
+					new users, once they have completed the Basic Training badge, will start their wiki
+					experience with 155 points, plus 20 more for the badge, for a total of 175. Creating
+					articles earns 10 points, which can be negated by negative ratings. 
+					<p>Three of the possible issues are likely to involve behavior which it would be an
+					administrator's job to handle. There is likely to be a need for separate testing
+					with users who are granted administrator rights over a pool of users that are
+					actually being "played" by one or more of the people conducting the research.
+					In this scenario, administrator behavior, and not normal user behavior, is being
+					tested.</p>
+					<p>There are several potential issues:</p>
+					<ul>
+						<li><strong>It's theoretically possible to spam short articles that are never read and
+						never rated by anyone, earning 10 points for creating each one.</strong> There is 
+						nothing intrinsically wrong with creating many unread articles: not every article 
+						will be popular. In theory, however, an editor or group of editors could create 
+						large numbers of blank or nearly-blank articles with the intention of
+					    their never being read, earning 10 points for each one. It would be difficult to do
+						this in the early days of a wiki instance when there would be fewer articles and this
+						behavior would stand out more, but on a high-activity instance it would be less
+						obvious. There will be badges (with points) awarded for creating certain multiples
+						of five articles (5, 10, 20, etc.), which would provide an additional cushion against
+						some of the low-quality spam articles being found and downvoted. This is compounded
+						by a current technical limitation: all articles are created as blank with a title,
+						then edited later.
+							<ul>
+								<li>This could be tested by nominating administrators, then arranging for
+								someone to pose as a normal user while creating many spam articles. The
+								goal would be to see how quickly administrators would detect something
+								like this against the background noise of normal wiki activity.</li>
+							</ul>
+						</li>
+						<li><strong>A spambot could become the highest-ranked user.</strong> This would be
+						caught by the administrators once it happened, but might reflect badly on the perceived
+						quality of the user base.
+							<ul>
+								<li>This could be tested by creating an actual bot, or selecting a group of
+								people to pose as one, posting at regular intervals, and measuring how
+								long it took for this activity to be detected.</li>
+							</ul>
+						</li>
+						<li><strong>Groups of editors could form alliances to upvote each others' content and
+						downvote that of others.</strong> This would be difficult for administrators to detect, and
+						difficult to deal with fairly - especially if administrators were part of the groups,
+						or the groups involved were some of the most frequent contributors to the site. However,
+						this is more of a people problem than a technical problem and would need to be dealt with
+						by administrators.
+							<ul>
+								<li>This would be difficult to test, as it would require large number of
+								subjects (or a few subjects posing as many users) to be using the demonstration
+								instance in the first place.</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+			</div>
+		</div>
 	</div>
 	
 	<!-- Le javascript
