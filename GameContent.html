@@ -150,7 +150,7 @@
 						 <hr/>
 						 <p>
 						 	SetupBooster articles should: <br/>
-						    <form action="#" method="post">
+						    <form action="#" method="GET">
 						    <input type="radio" name="choices" value="1"/> 1. Tell people how to do things with a specific application, API, or other software<br/>
 						    <input type="radio" name="choices" value="2"/> 2. Report bugs or design issues without describing a workaround<br/>
 						    <input type="radio" name="choices" value="3"/> 3. Complain about things you don't like<br/>
@@ -176,7 +176,7 @@
 						  It is Post 1 in the thread, posted on October 25, 2012. The URL
 						  of the post is http://queueoverload.com/questions/134021605/world-simulator-keeps-crashing.
 						  How would you write this citation?</p>
-						  <form action="#" method="post">
+						  <form action="#" method="GET">
 						    <textarea name="citation" rows="10" cols="80"></textarea><br/>
 						    <input type="submit"/><br/>
 						   </form>
@@ -195,7 +195,7 @@ Doe, J. (2012, October 25). World Simulator keeps
 						  I have read and understood the terms and conditions that govern my use of this site.
 						  By selecting "Yes" and submitting this answer, I accept the terms and conditions
 						  (if I have not done so previously).
-						  <form action="#" method="post">
+						  <form action="#" method="GET">
 						    <input type="radio" name="choices" value="Yes"/> Yes<br/>
 						    <input type="radio" name="choices" value="No"/> No<br/>
 						    <input type="submit"/><br/>
@@ -223,7 +223,7 @@ Doe, J. (2012, October 25). World Simulator keeps
 						<hr/>
 						<p>True or false: SetupBooster articles should be used to complain about
 						any issue which annoys you, and you do not have to implement a solution.</p>
-						<form action="#" method="post">
+						<form action="#" method="GET">
 						    <input type="radio" name="choices" value="True"/> True<br/>
 						    <input type="radio" name="choices" value="False"/> False<br/>
 						    <input type="submit"/><br/>
@@ -244,7 +244,7 @@ Doe, J. (2012, October 25). World Simulator keeps
 						<p>This is a paragraph. Some of the text has <strong>strong emphasis</strong>.</p>
 						<blockquote>This is a blockquote, with some of the text <em>emphasized</em>.</blockquote>
 						</p>
-						<form action="#" method="post">
+						<form action="#" method="GET">
 						    <textarea name="citation" rows="10" cols="80"></textarea><br/>
 						    <input type="submit"/><br/>
 						</form>
@@ -269,7 +269,7 @@ This is a paragraph. Some of the text has __strong emphasis__.
 						<hr/>
 						Type "Test" as the article title, select "Linux"
 						as the Operating System, and type "Other" as the subject.
-						<form action="#" method="post">
+						<form action="#" method="GET">
 						    Title: <input type="text" name="title" size="30" maxlength="250"/><br/>
 						    Operating System: <select name="os_menu" size="3">
 						    	<option value="windows">Windows</option>
@@ -288,7 +288,7 @@ This is a paragraph. Some of the text has __strong emphasis__.
 						<p>Assuming you named your article "Test" in the previous activity,
 						click <a href="#">here</a> to go to your new article. Make any change at all,
 						then come back to this page and click "Submit Query."</p>
-						<form action="#" method="post">
+						<form action="#" method="GET">
 							<input type="submit"/>
 						</form>
 						<hr/>
@@ -300,7 +300,7 @@ This is a paragraph. Some of the text has __strong emphasis__.
 						<div class="btn">Publish</div><br/>
 						You can still edit an article after publishing it.
 						<p>Click "Submit Query" to finish this activity.</p>
-						<form action="#" method="post">
+						<form action="#" method="GET">
 							<input type="submit"/>
 						</form>
 						<hr/>
@@ -312,7 +312,7 @@ This is a paragraph. Some of the text has __strong emphasis__.
 						</p>
 						<hr/>
 						Tag your "Test" article with "setup" and "guide."
-						<form action="#" method="post">
+						<form action="#" method="GET">
 						    Add tags: <input type="text" name="add-tags" size="30" maxlength="250"/><br/>
 						    <input type="submit"/><br/>
 						</form>
@@ -324,7 +324,7 @@ This is a paragraph. Some of the text has __strong emphasis__.
 						like their articles or have a suggestion for improving them.</p>
 						<hr/>
 						Add a comment on your own article (plain text):
-						<form action="#" method="post">
+						<form action="#" method="GET">
 							Comment by <strong>username</strong> on article <strong>Test</strong>:<br/>
 						    <textarea name="comment-field" rows="10" cols="80"></textarea><br/>
 						    <input type="submit"/><br/>
@@ -332,6 +332,7 @@ This is a paragraph. Some of the text has __strong emphasis__.
 						<hr/>
 					</div>
 				</section>
+				<!-- Article extras -->
 				<section id="article-extras">
 					<div class="page-header">
 						<h4> Activities 3: Article Extras</h4>
@@ -348,7 +349,7 @@ This is a paragraph. Some of the text has __strong emphasis__.
 						Type the code to embed the image in (SITE URL HERE)/test.png with 
 						title text "TEST", as shown below:<br/>
 						<img src="images/test.png" title="TEST"/><br/><br/>
-						<form action="#" method="post">
+						<form action="#" method="GET">
 						    <textarea name="text-field" rows="1" cols="50"></textarea><br/>
 						    <input type="submit"/><br/>
 						</form>
@@ -359,18 +360,19 @@ This is a paragraph. Some of the text has __strong emphasis__.
 						<h5>2. Upload Files (5 points)</h5>
 						SetupBooster supports non-executable file uploads of less than
 						20 MB in size. The upload form looks like this:
-						<form action="#" method="post">
+						<form action="#" method="GET">
 							<textarea name="text-field" rows="1" cols="100"></textarea>
 							<div class="btn">Browse</div><br/>
 							<div class="btn">Upload</div>
 						</form>
 					    For a list of supported file types, see the <a href="#" title="Not a real link">full list</a>.
 						Click "Submit Query" to finish this activity.
-						<form action="#" method="post">
+						<form action="#" method="GET">
 						    <input type="submit"/><br/>
 						</form>
 					</div>
 				</section>
+				<!-- User Basics -->
 				<section id="user-basics">
 					<div class="page-header">
 						<h4> Activities 4: About Users</h4>
@@ -387,7 +389,7 @@ This is a paragraph. Some of the text has __strong emphasis__.
 						<a href="#" title="Not a real link">
 						About User Types</a> page. Click "Submit Query" 
 						to finish this activity.
-						<form action="#" method="post">
+						<form action="#" method="GET">
 							<input type="submit"/><br/>
 						</form>
 						<hr/>
@@ -396,7 +398,7 @@ This is a paragraph. Some of the text has __strong emphasis__.
 						the "Send Message" tool on their own page.
 						<hr/>
 						Send the message "Hello" to user <strong>tutorialRobot</strong>:<br/>
-						<form action="#" method="post">
+						<form action="#" method="GET">
 							Send to user: <textarea name="sendto" rows="1" cols="50"></textarea><br/>
 							<textarea name="message" rows="10" cols="80"></textarea><br/>
 							<input type="submit"/><br/>
@@ -408,7 +410,7 @@ This is a paragraph. Some of the text has __strong emphasis__.
 						is accepted or rejected, you will receive a message.
 						<hr/>
 						Report the user <strong>antimatterRobot:</strong>
-						<form action="#" method="post">
+						<form action="#" method="GET">
 							Report user: <textarea name="reportuser" rows="1" cols="50"></textarea><br/>
 							Reason:<br/><textarea name="reason" rows="20" cols="80"></textarea><br/>
 							<input type="submit"/><br/>
@@ -430,7 +432,7 @@ This is a paragraph. Some of the text has __strong emphasis__.
 						   </ul>
 						   For a more comprehensive explanation, see the <a href="#" title="Not a real link">
 						   Points page</a>. Click "Submit Query" to earn 5 more points.
-						   <form action="#" method="post">
+						   <form action="#" method="GET">
 						    <input type="submit"/><br/>
 						   </form>
 						</p>
@@ -444,7 +446,7 @@ This is a paragraph. Some of the text has __strong emphasis__.
 						Badges page</a>.
 						<hr/>
 						Click "Submit Query" to finish this activity.<br/>
-						<form action="#" method="post">
+						<form action="#" method="GET">
 							<input type="submit"/><br/>
 						</form>
 					</div>
