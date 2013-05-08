@@ -1,0 +1,35 @@
+[
+    {
+        "pk": 1,
+        "model": "challenge_mgr.challengesetting",
+        "fields": {
+        	"use_internal_auth": true,
+        	"internal_auth_text": "###Others",
+            "name": "SetupBooster/Demo",
+            "domain": "localhost",
+            "ldap_search_base": null,
+            "landing_slogan": "## SetupBooster: The Software Guides Site That Anyone Can Write For",
+            "email_use_tls": true,
+            "landing_non_participant_text": "###I'm not a member\r\n#####but I'd like to know more about SetupBooster",
+            "email_port": 587,
+            "theme": "theme-setupbooster",
+            "use_cas_auth": false,
+            "wattdepot_server_url": "http://server.wattdepot.org:8194/wattdepot",
+            "email_enabled": false,
+            "logo": "media/setupbooster/sb_logo_100x100.png",
+            "ldap_server_url": null,
+            "landing_participant_text": "### I'm a member  \r\n##### You will be prompted for your username and password.",
+            "landing_introduction": "Welcome. SetupBooster is a site for technical guides that anyone can write for.",
+            "team_label": "User Type",
+            "email_host": "smtp.gmail.com"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "challenge_mgr.aboutpage",
+        "fields": {
+            "challenge": 1,
+            "about_page_text": "##What is SetupBooster?##\r\nSetupBooster is a software guides site application that is based on Makahiki. Its user interface is meant to be self-documenting, and users are taught how to write articles for the site through game activities, earning points and badges for their contributions. The goal of this site is to be used to host targeted guides, written to accomplish specific tasks for specific versions of software on specific operating systems, enabling users to document the steps they took to get their custom configurations up and running so that others can benefit from their experience.       \r\n\r\n(This site is based on an application that is currently under development on <a href=\"https://jtakayama.github.io/ics691-setupbooster.index.html\">Github.</a> Some features may be incomplete, or may not work correctly.)"
+        }
+    }
+]

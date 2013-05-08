@@ -1,0 +1,206 @@
+[
+  {
+    "pk": 1, 
+    "model": "team_mgr.group",
+    "fields": {
+      "name": "Administrators"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "team_mgr.group",
+    "fields": {
+      "name": "Users"
+    }
+  },
+  {
+    "pk": 1, 
+    "model": "team_mgr.team",
+    "fields": {
+      "group": 1,
+      "name": "Administrators"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "team_mgr.team",
+    "fields": {
+      "group": 2,
+      "name": "Normal Users"
+    }
+  },
+  {
+  	"pk": 1,
+  	"model": "auth.user",
+  	"fields": {
+  		"username": "Site Administrator",
+  		"first_name": "Site",
+  		"last_name": "Administrator",
+  		"is_active": true,
+  		"is_superuser": true,
+  		"is_staff": true,
+  		"groups": [],
+  		"user_permissions": [],
+  		"email": "siteadministrator@example.com",
+  		"date_joined": "2013-04-01 10:25:00"
+  	}
+  },
+  {
+  	"pk": 2,
+  	"model": "auth.user",
+  	"fields": {
+  		"username": "Test Administrator 2",
+  		"first_name": "Test",
+  		"last_name": "Administrator 2",
+  		"is_active": true,
+  		"is_superuser": true,
+  		"is_staff": true,
+  		"groups": [],
+  		"user_permissions": [],
+  		"email": "testadministrator2@example.com",
+  		"date_joined": "2013-04-02 04:01:13"
+  	}
+  },
+  {
+    "pk": 3,
+    "model": "auth.user",
+    "fields": {
+        "username": "tester1",
+        "first_name": "tester ",
+        "last_name": "1",
+        "is_active": true,
+        "is_superuser": false,
+        "is_staff": false,
+        "groups": [],
+        "user_permissions": [],
+        "email": "tester1@example.com",
+        "date_joined": "2013-05-07 03:00:00"
+    }
+  },
+  {
+  	"pk": 4,
+  	"model": "auth.user",
+  	"fields": {
+  	    "username": "tester2",
+  	    "first_name": "tester",
+  	    "last_name": "2",
+  	    "is_active": true,
+  	    "is_superuser": false,
+  	    "is_staff": false,
+  	    "groups": [],
+  	    "user_permissions": [],
+  	    "email": "tester2@example.com",
+  	    "date_joined": "2013-05-07 04:00:00"
+  	}
+  },
+  {
+  	"pk": 5,
+  	"model": "auth.user",
+  	"fields": {
+  		"username": "tester3",
+  		"first_name": "tester",
+  		"last_name": "3",
+  		"is_active": true,
+  		"is_superuser": false,
+  		"is_staff": false,
+  		"groups": [],
+  		"user_permissions": [],
+  		"email": "tester3@example.com",
+  		"date_joined": "2013-05-07 05:00:00"
+  	}
+  },
+  {
+  	"pk": 6,
+  	"model": "auth.user",
+  	"fields": {
+  		"username": "tester4",
+  		"first_name": "tester",
+  		"last_name": "4",
+  		"is_active": true,
+  		"is_superuser": false,
+  		"is_staff": false,
+  		"groups": [],
+  		"user_permissions": [],
+  		"email": "tester4@example.com",
+  		"date_joined": "2013-05-07 06:00:00"
+  	}
+  },
+  {
+    "pk": 1,
+    "model": "player_mgr.profile",
+    "fields": {
+      "name": "Test Administrator 1",
+      "team": 1,
+      "setup_complete": false,
+      "contact_text": "",
+      "user": 1,
+      "contact_carrier": null,
+      "setup_profile": false
+    }
+  },
+  {
+    "pk": 2,
+    "model": "player_mgr.profile",
+    "fields": {
+      "name": "Test Administrator 2",
+      "team": 1,
+      "setup_complete": false,
+      "contact_text": "",
+      "user": 2,
+      "contact_carrier": null,
+      "setup_profile": false
+    }
+  },
+  {
+    "pk": 3,
+    "model": "player_mgr.profile",
+    "fields": {
+      "name": "Tester 1",
+      "team": 2,
+      "setup_complete": false,
+      "contact_text": "",
+      "user": 3,
+      "contact_carrier": null,
+      "setup_profile": false
+    }
+  },
+  {
+    "pk": 4,
+    "model": "player_mgr.profile",
+    "fields": {
+      "name": "Tester 2",
+      "team": 2,
+      "setup_complete": false,
+      "contact_text": "",
+      "user": 4,
+      "contact_carrier": null,
+      "setup_profile": false
+    }
+  },
+  {
+    "pk": 5,
+    "model": "player_mgr.profile",
+    "fields": {
+      "name": "Tester 3",
+      "team": 2,
+      "setup_complete": false,
+      "contact_text": "",
+      "user": 5,
+      "contact_carrier": null,
+      "setup_profile": false
+    }
+  },
+  {
+    "pk": 6,
+    "model": "player_mgr.profile",
+    "fields": {
+      "name": "Tester 4",
+      "team": 2,
+      "setup_complete": false,
+      "contact_text": "",
+      "user": 6,
+      "contact_carrier": null,
+      "setup_profile": false
+    }
+  }
+]
