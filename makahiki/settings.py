@@ -243,6 +243,7 @@ INSTALLED_THEMES = (
     'theme-forest',
     'theme-google',
     'theme-hpu',
+    'theme-setupbooster',
     'theme-sonora',
     'theme-space',
     'theme-wave',

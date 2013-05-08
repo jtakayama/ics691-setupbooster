@@ -24,6 +24,8 @@ def main():
     os.system("python " + manage_py + " loaddata %s" % os.path.join(fixture_path, "base_*.json"))
     os.system("python " + manage_py + " loaddata %s" % os.path.join(fixture_path, "demo_*.json"))
     os.system("python " + manage_py + " loaddata %s" % os.path.join(fixture_path, "test_*.json"))
+    os.system("python " + manage_py + " loaddata %s" % os.path.join(fixture_path, "setupbooster_*.json"))
+
 
 
 if __name__ == '__main__':
