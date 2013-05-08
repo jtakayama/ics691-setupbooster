@@ -1,3 +1,7 @@
+DISCLAIMER: This license is provisional. This project uses code from the
+Makahiki project (github.com/csdl/makahiki) and the license for this project
+may change based on the license which is selected for the Makahiki project.
+
 Copyright (c) 2013, Jordan Takayama
 All rights reserved.
 
