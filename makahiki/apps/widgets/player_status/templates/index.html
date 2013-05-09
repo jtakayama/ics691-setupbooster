@@ -1,0 +1,20 @@
+<div class="content-box">
+    <div class="content-box-title">
+        Status
+        <a href="#" style="float: right">
+              <img src="{{ STATIC_URL}}images/icons/icon-help-sm.png" width="20"
+                   align="center"
+                   title="Click to get help about this window"
+                   onclick="toggleHelp(event, 'widget', 'player_status'); return false;" />
+        </a>	
+    </div>
+    <div class="content-box-contents">
+	<ul>
+	<li><a href="#">Profile</a></li>
+        <li><a href="{% url profile_badges %}">Badges</a></li>
+	<li><a href="#">Messages</a>(0)</li>
+	<li><a href="#">Published Articles: 0</a></li>
+	<li><a href="#">Sandbox drafts: 0</a></li>
+	</ul>
+    </div>
+</div>

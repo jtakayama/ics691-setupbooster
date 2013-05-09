@@ -354,7 +354,7 @@
             "widget": "my_achievements",
             "location": "Right",
             "priority": 3,
-            "enabled": true,
+            "enabled": false,
             "page": 8
         }
     },
@@ -572,6 +572,17 @@
             "location": "Right"
         }
     },
+    {
+        "pk": 116,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "priority": 4,
+            "widget": "player_status",
+            "enabled": true,
+            "page": 8,
+            "location": "Right"
+        }
+    },   
     {
         "pk": 1,
         "model": "challenge_mgr.gameinfo",

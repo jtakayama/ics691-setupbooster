@@ -550,5 +550,17 @@
             "slug": "average_rating",
             "contents": "Measures the average rating of a user's articles."
        }
+    },
+    {
+       "pk": 53,
+       "model": "help.helptopic",
+       "fields": {
+            "category": "widget",
+            "title": "Status",
+            "parent_topic": null,
+            "priority": 0,
+            "slug": "player_status",
+            "contents": "Displays links to other user information pages."
+       }
     }
 ]
