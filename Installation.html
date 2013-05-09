@@ -107,70 +107,290 @@
 				<hr/>
 				<section id="system">
 					<h4>System Requirements</h4>
+					This guide is written for Ubuntu Linux 12.04.1 LTS or higher. Other 
+					distros may work, but the installation commands will be different, 
+					and not all dependencies may be available.
+				    <ul>
+				    	<li>Virtual Machine (development): 
+				    		<ul>
+				    			<li>At least 10 GB disk space</li> 
+				    			<li>At least 4 GB RAM (2 GB works but is not recommended)</li>
+				    		</ul>
+				    	</li>
+				    	<li>Hardware (development):
+				    		<ul>
+				    			<li>Dual-core CPU</li>
+				    			<li>At least 10 GB disk space</li>
+				    			<li>At least 4 GB RAM</li>
+				    		</ul>
+				    	</li>
+				    	<li>Hardware (production):
+				    		<ul>
+				    			<li>Dual-core CPU</li>
+				    			<li>At least 10 GB disk space</li>
+				    			<li>At least 8 GB RAM</li>
+				    		</ul>
+				    	</li>
+				    </ul>
 				</section>
 				<hr/>
 				<section id="python">
 					<h4>Python</h4>
+					<p>Install Python 2.7.3 or higher. Do not install any version
+					of Python 3: it is not compatible with some features of the
+					system. Check your current installed version at the terminal:
+<pre>
+% python  --version
+Python 2.7.3
+</pre>
+					If you don't have Python in Linux, install Python from the terminal as follows:
+<pre>
+% sudo apt-get install python2.7
+</pre>
 				</section>
 				<hr/>
 				<section id="c-compiler">
 					<h4>C Compiler</h4>
+					<p>SetupBooster requires a C compiler to build some of its dependency
+					modules, such as PIL. Most Linux distributions come with the gcc
+					compiler already installed. Check that gcc is installed:
+<pre>
+% gcc --version					
+</pre>
+					If gcc is not installed, follow the 
+					<a href="https://help.ubuntu.com/community/InstallingCompilers">
+					Ubuntu documentation</a> to install it.</p>
 				</section>
 				<hr/>
 				<section id="git">
 					<h4>Git</h4>
+					<p>Git is a distributed version control system that is needed to
+					retrieve the project files from Github. Check that it is installed:
+<pre>
+% git --version
+</pre>
+					If it is not installed, install it from the terminal:
+<pre>
+% sudo apt-get install git
+</pre>
+					If you have a Github account, you can link it to the Github installation
+					by following <a href="https://help.github.com/articles/set-up-git#platform-linux">
+					Github's guide.</a></p>
 				</section>
 				<hr/>
 				<section id="pip">
 					<h4>Pip</h4>
+					Pip is a tool for installing Python packages. Install it as follows:
+<pre>
+% sudo easy_install pip
+</pre>
+					If this does not work, try installing setuptools first:
+<pre>
+% sudo apt-get install python-setuptools
+</pre>
+					After you install pip, check that the installation succeeded:
+<pre>
+% pip --version
+</pre>
 				</section>
 				<hr/>
 				<section id="virtualenv">
 					<h4>Virtual Environment Wrapper</h4>
+					<p>Virtualenvwrapper is used to install libraries outside the
+					global Python path. Complete the 
+					<a href="http://www.doughellmann.com/docs/virtualenvwrapper/install.html#basic-installation">virtualenvwrapper installation</a>
+					guide and follow it to the end of the Quick Start section. This will
+					install virtualenv and virtualenvwrapper. After this, create a virtual environment
+					for setupbooster. At this point in development, the application
+					still uses the original Makahiki virtual environment settings:
+<pre>
+% mkvirtualenv makahiki
+</pre>
+					Now check that the virtual environment wrapper is installed:
+<pre>
+% workon makahiki
+</pre>
+					</p> 
 				</section>
 				<hr/>
 				<section id="pil">
 					<h4>Python Imaging Library</h4>
+					<p>Issue the following commands in the Linux terminal to install
+					the Python Imaging Library (PIL):
+<pre>
+% sudo apt-get install -y python-imaging python-dev libjpeg-dev
+</pre>
+					Check the /usr/lib directory for libjpeg (JPG) and zlib (PNG). If they
+					are not there, you may need to make symbolic links. On a 32-bit
+					Linux system, this would be done with these commands:
+<pre>
+% sudo ln -s /usr/lib/i386-linux-gnu/libjpeg.so /usr/lib/
+% sudo ln -s /usr/lib/i386-linux-gnu/libz.so /usr/lib/
+</pre></p>
 				</section>
 				<hr/>
 				<section id="postgres">
 					<h4>PostgreSQL</h4>
+					<p>PostgreSQL is the backend database for SetupBooster; it was tested
+					with 9.1.3, but any 9.1.* version should be compatible. Use this
+					command to install it:
+<pre>
+% sudo apt-get install postgresql-9.1
+</pre>
+				To get the PostgreSQL server working for development use, you
+				will need to make the postgres user "trusted" so that local
+				processes like SetupBooster's Makahiki-based services can
+				connect to the database via the postgres user without needing
+				authentication. In /etc/postgresql/9.1/main, open pg_hba.conf
+				in a text editor. Change the line
+<pre>local all postgres ident</pre> or <pre>local all postgres peer</pre>
+to <pre>local all postgres trust</pre> and restart the database server with
+<pre>% sudo /etc/init.d/postgresql restart</pre>
+You will also need to install the libpq-dev package:
+<pre>% sudo apt-get install libpq-dev</pre>
+				Check that postgresql has been successfully configured.
+				If done correctly, the command
+<pre>% psql -U postgres</pre> should not prompt you for a password.</p>
 				</section>
 				<hr/>
 				<section id="memcached">
 					<h4>Memcached</h4>
+					<p>Memcached can improve the performance of SetupBooster
+					in a production environment. Install its components in
+					Ubuntu with these commands:
+<pre>
+% sudo apt-get install memcached
+% sudo apt-get install libmemcached-dev
+</pre></p>
 				</section>
 				<hr/>
 				<section id="sourcecode">
 					<h4>Download Source Code</h4>
+					<p>Download the source code by cloning or forking the
+					<a href="https://github.com/jtakayama/ics691-setupbooster">
+					ICS691-Setupbooster</a> repository:
+<pre>
+% git clone git://github.com/jtakayama/ics691-setupbooster.git
+</pre></p>
 				</section>
 				<hr/>
 				<section id="virtualenv-init">
 					<h4>Initialize Virtual Environment</h4>
+					<p>Switch to the makahiki/ directory (assuming you activated
+					this virtual environment previously in this tutorial). Then do this:
+<pre>
+% cd makahiki/
+% workon makahiki
+</pre> This must be done each time you work on the project in a new shell.
+					</p>
 				</section>
 				<hr/>
+				<section id="pip-install">
+					<h4>Install Requirements</h4>
+					<p>Install all of SetupBooster's other dependencies:
+<pre>
+% pip install -r requirements.txt
+</pre>
+					This will product a lot of output text. Psycopg2
+					may fail to compile the first time:
+<pre>
+gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -DPSYCOPG_DEFAULT_PYDATETIME=1 -DPSYCOPG_VERSION="2.4.6 (dt dec pq3 ext)" -DPG_VERSION_HEX=0x090108 -DPSYCOPG_EXTENSIONS=1 -DPSYCOPG_NEW_BOOLEAN=1 -DHAVE_PQFREEMEM=1 -I/usr/include/python2.7 -I. -I/usr/include/postgresql -I/usr/include/postgresql/9.1/server -c psycopg/psycopgmodule.c -o build/temp.linux-i686-2.7/psycopg/psycopgmodule.o -Wdeclaration-after-statement
+ 
+In file included from psycopg/psycopgmodule.c:27:0:
+ 
+./psycopg/psycopg.h:30:20: fatal error: Python.h: No such file or directory
+ 
+compilation terminated.
+ 
+error: command 'gcc' failed with exit status 1
+</pre> If this happens, install python-dev and then try again.
+<pre>
+% sudo apt-get install python-dev
+</pre></p>
+				</section>
 				<section id="vars">
 					<h4>Environment Variables</h4>
+					<p>SetupBooster requires that the environment variables MAKAHIKI_DATABASE_URL
+					and MAKAHIKI_ADMIN_INFO be set. The syntax for each variable, followed
+					by an example, is reproduced below:
+<pre>
+% # Syntax: postgres://&lt;db_user&gt;:&lt;db_password&gt;@&lt;db_host&gt;:&lt;db_port&gt;/&lt;db_name&gt;
+% export MAKAHIKI_DATABASE_URL=postgres://makahiki:makahiki@localhost:5432/makahiki
+
+% # Syntax:  &lt;admin_name&gt;:&lt;admin_password&gt;
+% export MAKAHIKI_ADMIN_INFO=admin:admin
+</pre>In order to load these every time the virtual environment is loaded, edit
+the <em>postactivate</em> file in <em>$WORKON_HOME/makahiki/bin</em> and add the
+variables to it. Publicly accessible servers should use a stronger password than
+"admin."</p>
 				</section>
 				<hr/>
 				<section id="setupbooster-init">
 					<h4>Initialize SetupBooster</h4>
+					<p>To initialize the SetupBooster database, switch to 
+					the <em>ics691-setupbooster/makahiki</em> directory and run the
+					<em>initialize_instance.py</em> script:
+<pre>
+% scripts/initialize_instance.py --type setupbooster
+</pre> This command erases all modifications made to the database, including
+any changes made to application settings. It should not be used on a production
+system more than once.</p>
 				</section>
 				<hr/>
 				<section id="server">
 					<h4>Start the Server</h4>
+					<p>SetupBooster comes with two servers. <em>gunicorn</em> is
+					more suited for production use, while <em>runserver</em> is
+					better for development use.</p>
+<strong>gunicorn:</strong><br/>
+<pre>
+% ./manage.py run_gunicorn
+</pre>
+<strong>runserver:</strong><br/>
+<pre>
+% ./manage.py runserver
+</pre>
 				</section>
 				<hr/>
 				<section id="verify">
 					<h4>Verify Server is Running</h4>
+					<p>Go to 127.0.0.1:8000 in a browser. You should be taken to a landing page.
+					The password you set for the <strong>admin</strong> account as an environment
+					variable can be used to log in. All other accounts will need to be
+					given passwords manually, even if they were initialized by
+					<em>initialize_instance.py</em>.</p>
 				</section>
 				<hr/>
 				<section id="configure">
 					<h4>Configure SetupBooster</h4>
+					<p>See the <a href="./UserGuide.html">User Guide.</a></p>
 				</section>
 				<hr/>
 				<section id="update">
 					<h4>Update a Running Instance</h4>
+					<p>It is possible to update a running SetupBooster instance
+					without re-initializing the database:
+					<ol>
+						<li>In the shell that is running the server, type Ctrl+C
+						to stop the server.</li>
+						<li>Switch to the ics691-setupbooter/makahiki directory
+						and initialize the virtual environment:
+<pre>
+% cd makahiki
+% workon makahiki
+</pre></li>
+						<li>Pull the latest source code from the Setupbooster repository:
+<pre>
+% git pull origin master
+</pre>
+						</li>
+						<li>Run the update_instance script:
+<pre>
+% ./scripts/update_instance.py
+</pre></li>
+						<li>Start <em>gunicorn</em> or <em>runserver</em>
+						as shown previously.</li>
+					</ol></p>
 				</section>
 				<hr/>
 			</div>
