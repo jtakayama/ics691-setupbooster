@@ -73,10 +73,58 @@
 		</div>
 	</div>
 	<!-- Content -->
-	<div class="row-fluid">
-		Test:  User Guide page
+	<div class="container span12">
+		<div class="row-fluid">
+			<div class="span4 bs-docs-sidebar">
+        		<ul class="nav nav-list bs-docs-sidenav">
+          			<li><a href="#overview"><i class="icon-chevron-right"></i> Overview</a></li>
+          			<li><a href="#profile"><i class="icon-chevron-right"></i> Profile page Changes</a></li>
+          			<li><a href="#user-org"><i class="icon-chevron-right"></i> User Organization</a>
+        		</ul>
+      		</div>
+      		<div class="span8">
+      			<h1>User Guide</h1>
+      			<hr/>
+      			<section id="overview">
+      				<h4>Overview</h4>
+      				<p>At present, any changes from the original appearance of Makahiki
+      				are mostly cosmetic due to implementation difficulties, and the
+      				new widgets are not fully functional. The 
+      				<a href="http://makahiki.readthedocs.org/en/latest/index.html">Makahiki documentation</a>
+      				is still generally useful for configuring the system.
+      			</section>
+      			<hr/>
+      			<section id="profile">
+      				<h4> Profile page Changes</h4>
+      				<p>An article creation widget was partially implemented: it creates an
+      				entry in the database, but the resulting article has no text and the
+      				entry is not currently retrieved by any of the other widgets.</p>
+      				<img src="./images/user_guide/new_article.png" title="New Article widget"/><br/>
+      				<a href="./images/user_guide/new_article.png">View full size</a><br/>
+      				<p>Non-functioning Average Rating (average_rating) and Status (player_status) 
+      				widgets also appear here, but the values displayed are defaults; the equivalent
+      				database models are not implemented.</p>
+      				<img src="./images/user_guide/article_average.png" title="Average article rating widget"/><br/>
+      				<a href="./images/user_guide/article_average.png">View full size</a><br/>
+      				<img src="./images/user_guide/status.png" title="User status widget"/><br/>
+      				<a href="./images/user_guide/status.png">View full size</a><br/>
+      				Both of these widgets are currently experiencing a rendering bug
+      				resulting from a priority conflict with a disabled widget:
+      				<img src="./images/user_guide/rendering_glitch.png" title="Priority conflict"/><br/>
+      				<a href="./images/user_guide/rendering_glitch.png">View full size</a><br/>
+      			</section>
+      			<section id="user-org">
+      				<h4>User Organization</h4>
+      				<p>Users are organized into normal users and administrators, consistent with
+      				the plans for the final implementation of the wiki. Users must be manually
+      				added by one of the existing administrators at the moment, so the system
+      				is currently only functional as an invite-only site.</p>
+      				<img src="./images/user_guide/user_groups.png"/>
+      				
+      			</section>
+      		</div>
+		</div>
 	</div>
-	
 	<!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
