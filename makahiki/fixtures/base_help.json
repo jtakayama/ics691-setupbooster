@@ -537,7 +537,18 @@
             "priority": 0,
             "slug": "create-article",
             "contents": "Creates a new article with the given title, subject, and tags. The creation date and time will be the current date and time."
-
         }
-    } 
+    }, 
+    {
+       "pk": 52,
+       "model": "help.helptopic",
+       "fields": {
+            "category": "widget",
+            "title": "Average Rating",
+            "parent_topic": null,
+            "priority": 0,
+            "slug": "average_rating",
+            "contents": "Measures the average rating of a user's articles."
+       }
+    }
 ]

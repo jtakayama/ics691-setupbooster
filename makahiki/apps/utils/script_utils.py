@@ -84,7 +84,14 @@ def reset_db(heroku_app):
         os.system("heroku pg:reset DATABASE_URL --app %s  --confirm %s" % (
             heroku_app, heroku_app))
 
-
+def reset_articles(heroku_app):
+    """Erase all articles and their file uploads."""
+    print "Erasing articles..."
+    base_dir = manage_py_dir()
+    os.system("cd " + base_dir + "; rm -rf site_media/articles/")
+    print ("Creating empty article directory...")
+    os.system("mkdir " + base_dir + "site_media/articles/")
+    
 def create_heroku_app(heroku_app):
     """create the heroku application."""
     print "create heroku app..."

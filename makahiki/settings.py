@@ -187,6 +187,7 @@ for widget in INSTALLED_COMMON_WIDGET_APPS:
 INSTALLED_WIDGET_APPS = (
     'action_feedback',
     'ask_admin',
+    'average_rating',
     'badge_scoreboard',
     'badges',
     'bonus_points',
